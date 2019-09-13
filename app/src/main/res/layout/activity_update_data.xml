@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateDataActivity">
+
+    <EditText
+        android:id="@+id/InputJenkelUp"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="20dp"
+        android:ellipsize="none"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:scrollbarSize="4dp"
+        android:hint="Jenis Kelamin"
+        app:layout_constraintBottom_toTopOf="@+id/InputAlamatUp"
+        app:layout_constraintEnd_toEndOf="@+id/InputAlamatUp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_create_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView16"
+        app:layout_constraintEnd_toStartOf="@+id/NomorInputUp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
+
+    <EditText
+        android:id="@+id/InputAlamatUp"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="144dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Alamat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.698"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="8dp" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/InputNamaUp"
+        app:layout_constraintEnd_toStartOf="@+id/InputNamaUp"
+        app:layout_constraintTop_toTopOf="@+id/InputNamaUp"
+        android:src="@drawable/ic_group_black_24dp"
+        android:layout_marginRight="8dp" />
+
+    <EditText
+        android:id="@+id/InputTglLahirUp"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Tanggal Lahir"
+        app:layout_constraintBottom_toTopOf="@+id/InputJenkelUp"
+        app:layout_constraintEnd_toEndOf="@+id/InputJenkelUp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView18"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/InputJenkelUp"
+        app:layout_constraintEnd_toStartOf="@+id/InputJenkelUp"
+        app:layout_constraintTop_toTopOf="@+id/InputJenkelUp"
+        android:src="@drawable/ic_person_black_24dp"
+        android:layout_marginRight="8dp" />
+
+    <EditText
+        android:id="@+id/InputNamaUp"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nama"
+        app:layout_constraintBottom_toTopOf="@+id/InputTglLahirUp"
+        app:layout_constraintEnd_toEndOf="@+id/InputTglLahirUp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView17" />
+
+    <EditText
+        android:id="@+id/NomorInputUp"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nomor"
+        android:textColor="#FAFAFA"
+        app:layout_constraintBottom_toTopOf="@+id/InputNamaUp"
+        app:layout_constraintEnd_toEndOf="@+id/InputNamaUp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/InputNamaUp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="102dp"
+        android:layout_height="27dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/textUpdate"
+        app:layout_constraintEnd_toEndOf="@+id/textUpdate"
+        app:layout_constraintStart_toStartOf="@+id/textUpdate"
+        app:layout_constraintTop_toTopOf="@+id/textUpdate" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/InputAlamatUp"
+        app:layout_constraintEnd_toStartOf="@+id/InputAlamatUp"
+        app:layout_constraintTop_toTopOf="@+id/InputAlamatUp"
+        android:src="@drawable/ic_place_black_24dp"
+        android:layout_marginRight="8dp" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/InputTglLahirUp"
+        app:layout_constraintEnd_toStartOf="@+id/InputTglLahirUp"
+        app:layout_constraintTop_toTopOf="@+id/InputTglLahirUp"
+        android:src="@drawable/ic_date_range_black_24dp"
+        android:layout_marginRight="8dp" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="@+id/NomorInputUp"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/student1" />
+
+    <TextView
+        android:id="@+id/txtUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="92dp"
+        android:text="Simpan"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_save_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

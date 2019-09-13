@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailDataActivity">
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/student1" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/NomerInputDet"
+        app:layout_constraintEnd_toStartOf="@+id/NomerInputDet"
+        app:layout_constraintTop_toTopOf="@+id/NomerInputDet"
+        android:src="@drawable/ic_create_black_24dp"
+        android:layout_marginRight="8dp" />
+
+    <EditText
+        android:id="@+id/NomerInputDet"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="none"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nomor"
+        android:scrollbarSize="4dp"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/InputNamaDet"
+        app:layout_constraintEnd_toStartOf="@+id/InputNamaDet"
+        app:layout_constraintTop_toTopOf="@+id/InputNamaDet"
+        android:src="@drawable/ic_group_black_24dp"
+        android:layout_marginRight="8dp" />
+
+    <EditText
+        android:id="@+id/InputNamaDet"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nama"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="@+id/NomerInputDet"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/NomerInputDet"
+        app:layout_constraintTop_toBottomOf="@+id/NomerInputDet"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/InputTglLahirDet"
+        app:layout_constraintEnd_toStartOf="@+id/InputTglLahirDet"
+        app:layout_constraintTop_toTopOf="@+id/InputTglLahirDet"
+        android:src="@drawable/ic_date_range_black_24dp"
+        android:layout_marginRight="8dp" />
+
+    <EditText
+        android:id="@+id/InputTglLahirDet"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Tanggal Lahir"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="@+id/InputNamaDet"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/InputNamaDet"
+        app:layout_constraintTop_toBottomOf="@+id/InputNamaDet" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/InputAlamatDet"
+        app:layout_constraintEnd_toStartOf="@+id/InputAlamatDet"
+        app:layout_constraintTop_toTopOf="@+id/InputAlamatDet"
+        android:src="@drawable/ic_place_black_24dp"
+        android:layout_marginRight="8dp" />
+
+    <EditText
+        android:id="@+id/InputJenkelDet"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Jenis Kelamin"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="@+id/InputTglLahirDet"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/InputTglLahirDet"
+        app:layout_constraintTop_toBottomOf="@+id/InputTglLahirDet" />
+
+    <EditText
+        android:id="@+id/InputAlamatDet"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Alamat"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="@+id/InputJenkelDet"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toBottomOf="@+id/InputJenkelDet" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/InputJenkelDet"
+        app:layout_constraintEnd_toStartOf="@+id/InputJenkelDet"
+        app:layout_constraintTop_toTopOf="@+id/InputJenkelDet"
+        android:src="@drawable/ic_person_black_24dp"
+        android:layout_marginRight="8dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
