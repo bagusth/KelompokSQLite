@@ -24,12 +24,12 @@ public class InputDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_data);
 
-        nomorInput = findViewById(R.id.NomerInputDet);
-        namaInput = findViewById(R.id.InputNamaDet);
-        tglLahirInput = findViewById(R.id.InputTglLahirDet);
-        jenkelInput = findViewById(R.id.InputJenkelDet);
-        alamatInput = findViewById(R.id.InputAlamatDet);
-        textSave = findViewById(R.id.txtUpdate);
+        nomorInput = findViewById(R.id.NomorInput);
+        namaInput = findViewById(R.id.NamaInput);
+        tglLahirInput = findViewById(R.id.InputTglLahir);
+        jenkelInput = findViewById(R.id.InputJenKelIn);
+        alamatInput = findViewById(R.id.InputAlamat);
+        textSave = findViewById(R.id.txtSave);
 
         final DatabaseHelper db = new DatabaseHelper(this);
 

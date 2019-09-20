@@ -108,7 +108,7 @@
         android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Nomot"
+        android:hint="Nomor"
         app:layout_constraintBottom_toTopOf="@+id/NamaInput"
         app:layout_constraintEnd_toEndOf="@+id/NamaInput"
         app:layout_constraintHorizontal_bias="0.0"

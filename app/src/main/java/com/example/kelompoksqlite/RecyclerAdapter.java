@@ -13,11 +13,11 @@ import com.example.kelompoksqlite.Database.Mahasiswa;
 
 import java.util.List;
 
-public class RecyclerAdapter extends RecyclerView.Adapter {
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
     List<Mahasiswa> mahasiswaList;
-    private DashboardActivity.Listener listener;
-    private DashboardActivity.Listener longClickListener;
+    private Listener listener;
+    private Listener longClickListener;
 
     public RecyclerAdapter(List<Mahasiswa> mahasiswaList) {
         this.mahasiswaList = mahasiswaList;
@@ -34,17 +34,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
-    }
-
-    @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull RecyclerAdapter.ViewHolder holder, final int position) {
         CardView card = holder.card;
-        holder.bean = Mahasiswa.getPosition();
+        holder.bean = mahasiswaList.get(position);
 
-        TextView textNama = card.findViewById(R.id.recycler_list_data);
-        textNama.setText(mahasiswaList.get(position).getNama());
+        TextView textNama = card.findViewById(R.id.txt_card_nama);
+        textNama.setText(holder.bean.getNama());
 
         card.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,10 +66,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
     }
 
     public void setListener(Listener listener) {
-        this.listener = (DashboardActivity.Listener) listener;
+        this.listener = listener;
     }
     public void setLongClickListener(Listener listener) {
-        this.longClickListener = (DashboardActivity.Listener) listener;
+        this.longClickListener =  listener;
     }
 
     public interface Listener {
@@ -82,7 +77,6 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        public Object mahasiswa;
         CardView card;
         Mahasiswa bean;
         public ViewHolder(CardView card) {
@@ -91,4 +85,4 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
         }
     }
 }
-}
+

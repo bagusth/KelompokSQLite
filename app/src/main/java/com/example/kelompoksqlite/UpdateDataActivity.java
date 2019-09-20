@@ -26,12 +26,12 @@ public class UpdateDataActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_data);
 
-        nomorInput = findViewById(R.id.NomerInputDet);
-        namaInput = findViewById(R.id.InputNamaDet);
-        tglLahirInput = findViewById(R.id.InputTglLahirDet);
-        jenkelInput = findViewById(R.id.InputJenkelDet);
-        alamatInput = findViewById(R.id.InputAlamatDet);
-        textSave = findViewById(R.id.txtSave);
+        nomorInput = findViewById(R.id.NomorInputUp);
+        namaInput = findViewById(R.id.InputNamaUp);
+        tglLahirInput = findViewById(R.id.InputTglLahirUp);
+        jenkelInput = findViewById(R.id.InputJenkelUp);
+        alamatInput = findViewById(R.id.InputAlamatUp);
+        textSave = findViewById(R.id.txtUpdate);
         context = this;
 
         Mahasiswa mahasiswa = getIntent().getParcelableExtra("mahasiswa");

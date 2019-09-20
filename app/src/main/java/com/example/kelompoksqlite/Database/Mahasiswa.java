@@ -36,11 +36,6 @@ public class Mahasiswa implements Parcelable {
         this.alamat = alamat;
     }
 
-    public static Mahasiswa getPosition() {
-        return getPosition();
-    }
-
-
     public int getIdMahasiswa() {
         return idMahasiswa;
     }

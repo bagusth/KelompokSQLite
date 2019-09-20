@@ -20,13 +20,16 @@ public class DetailDataActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_data);
-        nomorInput = findViewById(R.id.NomorInputUp);
-        namaInput = findViewById(R.id.InputNamaUp);
-        tglLahirInput = findViewById(R.id.NomorInputUp);
-        jenkelInput = findViewById(R.id.InputJenkelUp);
-        alamatInput = findViewById(R.id.InputAlamatUp);
+        nomorInput = findViewById(R.id.NomerInputDet);
+        namaInput = findViewById(R.id.InputNamaDet);
+        tglLahirInput = findViewById(R.id.NomerInputDet);
+        jenkelInput = findViewById(R.id.InputJenkelDet);
+        alamatInput = findViewById(R.id.InputAlamatDet);
 
         Mahasiswa mahasiswa = getIntent().getParcelableExtra("mahasiswa");
+
+
+        getSupportActionBar().setTitle(mahasiswa.getTglLahir());
 
         nomorInput.setText(mahasiswa.getIdMahasiswa()+"");
         namaInput.setText(mahasiswa.getNama());

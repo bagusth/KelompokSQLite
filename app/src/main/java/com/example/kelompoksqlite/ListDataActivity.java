@@ -44,7 +44,9 @@ public class ListDataActivity extends AppCompatActivity {
         adapter.setLongClickListener(new RecyclerAdapter.Listener() {
             @Override
             public void onClick(final int position) {
-                new AlertDialog.Builder(context);
+                final RecyclerAdapter.ViewHolder viewHolder = (RecyclerAdapter.ViewHolder)
+                        recyclerView.findViewHolderForLayoutPosition(position);
+                new AlertDialog.Builder(context)
                 .setTitle("Pilihan")
                 .setItems(dialogItems, new DialogInterface.OnClickListener() {
                     @Override
@@ -56,8 +58,6 @@ public class ListDataActivity extends AppCompatActivity {
                             case 1:
                                 gotoUpdateActivity(recyclerView, position);
                             case 2:
-                                RecyclerAdapter.ViewHolder viewHolder = (RecyclerAdapter.ViewHolder)
-                                        recyclerView.findViewHolderForLayoutPosition(position);
                                 db.delete(Integer.valueOf(viewHolder.bean.getIdMahasiswa()));
                         }
 
@@ -66,7 +66,7 @@ public class ListDataActivity extends AppCompatActivity {
 
 
                     private void gotoDetailActivity(RecyclerView recyclerView, int position) {
-                        RecyclerAdapter.ViewHolder v = (RecyclerAdapter.ViewHolder) ListDataActivity.this.recyclerView.findViewHolderForLayoutPosition(position);
+                        RecyclerAdapter.ViewHolder v = (RecyclerAdapter.ViewHolder) recyclerView.findViewHolderForLayoutPosition(position);
                         Intent intent = new Intent(ListDataActivity.this, DetailDataActivity.class);
                         intent.putExtra("mahasiswa", v.bean);
                         startActivity(intent);

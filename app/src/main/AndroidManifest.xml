@@ -12,7 +12,6 @@
         <activity android:name=".UpdateDataActivity"></activity>
         <activity android:name=".DetailDataActivity" />
         <activity android:name=".InputDataActivity" />
-        <activity android:name=".InputData" />
         <activity android:name=".ListDataActivity" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".MainActivity">
