@@ -41,7 +41,7 @@ public class DashboardActivity extends AppCompatActivity {
                     intent = new Intent(DashboardActivity.this, InputDataActivity.class);
                     break;
                 case R.id.imageInformasi:
-                    intent = new Intent(DashboardActivity.this, ListDataActivity.class);
+                    intent = new Intent(DashboardActivity.this, informasi_activity.class);
                     break;
             }
             startActivity(intent);

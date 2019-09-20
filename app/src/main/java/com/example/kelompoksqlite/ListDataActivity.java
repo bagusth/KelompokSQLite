@@ -47,40 +47,39 @@ public class ListDataActivity extends AppCompatActivity {
                 final RecyclerAdapter.ViewHolder viewHolder = (RecyclerAdapter.ViewHolder)
                         recyclerView.findViewHolderForLayoutPosition(position);
                 new AlertDialog.Builder(context)
-                .setTitle("Pilihan")
-                .setItems(dialogItems, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        switch (i){
-                            case 0:
-                                gotoDetailActivity(recyclerView, position);
-                                break;
-                            case 1:
-                                gotoUpdateActivity(recyclerView, position);
-                            case 2:
-                                db.delete(Integer.valueOf(viewHolder.bean.getIdMahasiswa()));
-                        }
+                        .setTitle("Pilihan")
+                        .setItems(dialogItems, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                switch (i) {
+                                    case 0:
+                                        gotoDetailActivity(recyclerView, position);
+                                        break;
+                                    case 1:
+                                        gotoUpdateActivity(recyclerView, position);
+                                    case 2:
+                                        db.delete(Integer.valueOf(viewHolder.bean.getIdMahasiswa()));
+                                }
 
-                    }
+                            }
 
 
+                            private void gotoDetailActivity(RecyclerView recyclerView, int position) {
+                                RecyclerAdapter.ViewHolder v = (RecyclerAdapter.ViewHolder) recyclerView.findViewHolderForLayoutPosition(position);
+                                Intent intent = new Intent(ListDataActivity.this, DetailDataActivity.class);
+                                intent.putExtra("mahasiswa", v.bean);
+                                startActivity(intent);
 
-                    private void gotoDetailActivity(RecyclerView recyclerView, int position) {
-                        RecyclerAdapter.ViewHolder v = (RecyclerAdapter.ViewHolder) recyclerView.findViewHolderForLayoutPosition(position);
-                        Intent intent = new Intent(ListDataActivity.this, DetailDataActivity.class);
-                        intent.putExtra("mahasiswa", v.bean);
-                        startActivity(intent);
+                            }
 
-                    }
-
-                    private void gotoUpdateActivity(RecyclerView recyclerView, int position) {
-                        RecyclerAdapter.ViewHolder v = (RecyclerAdapter.ViewHolder) recyclerView.findViewHolderForLayoutPosition(position);
-                        Intent intent = new Intent(ListDataActivity.this, UpdateDataActivity.class);
-                        intent.putExtra("mahasiswa", v.bean);
-                        startActivity(intent);
-                    }
-                })
-                .show();
+                            private void gotoUpdateActivity(RecyclerView recyclerView, int position) {
+                                RecyclerAdapter.ViewHolder v = (RecyclerAdapter.ViewHolder) recyclerView.findViewHolderForLayoutPosition(position);
+                                Intent intent = new Intent(ListDataActivity.this, UpdateDataActivity.class);
+                                intent.putExtra("mahasiswa", v.bean);
+                                startActivity(intent);
+                            }
+                        })
+                        .show();
             }
         });
 
@@ -90,7 +89,11 @@ public class ListDataActivity extends AppCompatActivity {
 
 
     }
-
     private void gotoDetailActivity(RecyclerView recyclerView, int position) {
+        RecyclerAdapter.ViewHolder v = (RecyclerAdapter.ViewHolder) recyclerView.findViewHolderForLayoutPosition(position);
+        Intent intent = new Intent(ListDataActivity.this, DetailDataActivity.class);
+        intent.putExtra("mahasiswa", v.bean);
+        startActivity(intent);
+
     }
 }
